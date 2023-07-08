@@ -4,10 +4,6 @@ import keyboard
 from tkinter.filedialog import askopenfilename
 import os
 
-
-# Dependecie of VB-CABLE Virtual Audio Device.
-# download at https://vb-audio.com/Cable/ or change the device in the mixer.init
-
 def play_sound(file):
     mixer.init(devicename= 'CABLE Input (VB-Audio Virtual Cable)')    
     mixer.music.load(file) # Load the mp3
