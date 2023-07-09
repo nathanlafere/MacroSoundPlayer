@@ -8,7 +8,7 @@ import os
 # download at https://vb-audio.com/Cable/ or change the device in the mixer.init
 
 def play_sound(file,checkvar):
-    if checkvar.get() != 0:
+    if interface is None or checkvar.get() != 0:
         mixer.init(devicename= 'CABLE Input (VB-Audio Virtual Cable)')    
         mixer.music.load(file) # Load the mp3
         mixer.music.play() # Play it
@@ -37,4 +37,5 @@ def start_load_hotkeys():
 
 os.chdir(os.getcwd()+'\SoundFiles')
 hotkey_list = []
+interface = None
 start_load_hotkeys()

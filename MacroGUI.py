@@ -47,7 +47,8 @@ def change_hotkey(_hotkey, new_key):
         main.hotkey_list[main.hotkey_list.index(_hotkey)][2] = _hotkey[2][_hotkey[2].rfind("\\")+1:_hotkey[2].rfind("_")+1]+new_key.replace("+","-")+'.mp3'
         main.keyboard.clear_all_hotkeys()
         reload_inside_canvas_frame()
-    
+
+main.interface = 'GUI'
 window = Tk(className=" Macro Sound Player")
 window.geometry("600x400")
 window.configure(bg="#595959")
