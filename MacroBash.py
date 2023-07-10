@@ -30,4 +30,4 @@ def prompt_text():
 
 prompt_text()
 keyboard.add_hotkey("ctrl+alt+1", config_new_hotkey)
-keyboard.wait('esc')
+keyboard.wait()
