@@ -32,6 +32,7 @@ def create_grid(_hotkey):
         Checkbutton(inside_canvas_frame,variable = _hotkey[3]).grid(row=1 + main.hotkey_list.index(_hotkey), column=0)
     else:
         CheckVar = IntVar()
+        CheckVar.set(1)
         Checkbutton(inside_canvas_frame,variable = CheckVar).grid(row=1 + main.hotkey_list.index(_hotkey), column=0)
         _hotkey.append(CheckVar)
     Label(inside_canvas_frame, text=f'{_hotkey[1]} {_hotkey[0]}',font=("Tekton Pro",10),wraplength=155,justify="center").grid(row=1 + main.hotkey_list.index(_hotkey), column=1)
