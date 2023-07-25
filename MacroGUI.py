@@ -4,6 +4,7 @@ import os
 import main
 
 def ask_path():
+    path_entry.delete("0","end")
     file = askopenfilename()
     path_entry.insert(0,file)
 
